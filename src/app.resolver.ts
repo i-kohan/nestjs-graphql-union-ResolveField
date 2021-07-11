@@ -29,7 +29,7 @@ const books = [{
 
 @Resolver(() => Author)
 export class AuthorResolver {
-  @ResolveField(returns => Book)
+  @ResolveField(returns => [Book])
   books(@Parent() author) {
     return books.filter(({ authorId }) => author.id === authorId);
   }
