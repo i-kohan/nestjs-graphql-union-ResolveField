@@ -1,4 +1,6 @@
-In this example we have Author and Book models. This models are these models are united in a ResultUnion.
+This example is an extended copy of the documentation example: https://docs.nestjs.com/graphql/unions-and-enums#code-first.
+
+In this example we have Author and Book models. These models are united in a ResultUnion.
 
 Author model must resolve list of books, Book model must resolve it author.
 
