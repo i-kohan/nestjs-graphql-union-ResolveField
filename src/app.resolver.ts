@@ -30,7 +30,7 @@ const books = [{
 @Resolver(() => Author)
 export class AuthorResolver {
   @ResolveField(returns => Book)
-  book(@Parent() author) {
+  books(@Parent() author) {
     return books.filter(({ authorId }) => author.id === authorId);
   }
 }
@@ -38,7 +38,7 @@ export class AuthorResolver {
 @Resolver(() => Book)
 export class BookResolver {
   @ResolveField(returns => Author)
-  book(@Parent() book) {
+  author(@Parent() book) {
     return authors.find(({ id }) => book.id === id);
   }
 }
