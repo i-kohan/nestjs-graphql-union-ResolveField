@@ -1,0 +1,19 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Author {
+  name: String!
+  books: [Book!]
+}
+
+type Book {
+  title: String!
+  author: Author!
+}
+
+type Query {
+  search: [ResultUnion!]!
+}
+
+union ResultUnion = Author | Book
